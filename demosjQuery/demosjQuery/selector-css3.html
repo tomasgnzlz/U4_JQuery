@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Probando los selectores de CSS</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+				//selectores prev ~ siblings
+				$("#a2 ~ div.clase").css("font-size", "2rem");
+			});
+		</script>
+	</head>
+	<body>
+		<div id="a1">Capa número 1</div> 
+		<div id="a2">Capa número 2</div> 
+		<div id="a3">Capa número 3</div>  
+		<div id="a4" class="clase">Capa número 4</div>
+	</body>
+</html>
+
+

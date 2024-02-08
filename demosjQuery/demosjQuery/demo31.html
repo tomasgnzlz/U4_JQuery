@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Eventos bind() y unbind()</title>
+    <script src="jq/jquery-3.2.1.min.js" type="text/javascript"></script>	
+		<script language="javascript">
+			$(document).ready(function(){
+				$("p").bind("click mouseenter mouseleave", function(e){
+					if($(this).css("color")!="rgb(250, 100, 0)")
+						$(this).css("color", "rgb(250, 100, 0)");
+					else
+						$(this).css("color", "rgb(150, 0, 255)");
+				})
+				
+				function clicAlerta(){
+					alert("Has hecho clic");
+				}
+				
+				$(".miclase").bind("click", clicAlerta);
+				
+				$("#quitarevento").bind("click", function(){
+					$(".miclase").unbind("click", clicAlerta);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<p class="miclase">Primer párrafo</p>
+		<p>Otro párrafo</p>
+		<input type=button value="Quitar el alert del clic del primer párrafo" id="quitarevento">
+	</body>
+</html>
+

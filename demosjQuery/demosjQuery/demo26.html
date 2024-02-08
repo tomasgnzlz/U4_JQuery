@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Trabajando con eventos</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			div{
+				border-radius: 0.5rem;
+				padding:1rem;
+				margin:1rem;
+				width: 15%;
+			}
+			div#micapa{
+				background-color: black;
+				color:white;
+				user-select:none;
+			}
+			div#mensaje{border:1px solid black;}
+			main#eventos{display:flex; flex-direction: space-around;}
+		</style>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>   
+		<script>
+			var numClics = 0;
+			var numDobleClics = 0;
+			$(document).ready(function(){
+				$("#micapa").dblclick(function(e){
+					numDobleClics++;
+					$("#mensaje").html("Has hecho doble-clic<br>" + "Número de clics: " + numClics + "<br>Número de doble clics: " + numDobleClics);
+				});
+				$("#micapa").click(function(e){
+					numClics++;
+					$("#mensaje").html("Has hecho clic<br>" + "Número de clics: " + numClics + "<br>Número de doble clics: " + numDobleClics);
+				});
+			})
+		</script>
+	</head>
+	<body>
+	    <main id="eventos">
+			<div id="micapa">Haz clic y doble clic sobre esta capa para intentar entender cómo se captan los eventos de ratón.</div>
+			<div id="mensaje">Aquí se va a mostrar la información sobre los eventos de ratón.</div>
+		</main>
+	</body>
+</html>
+
+

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	    <title>Trabajando con el objeto evento y mousemove</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script> 
+		<script>
+			$(document).ready(function(){
+				$(document).mousemove(function(evento){
+					$("h1").html("X: " + evento.pageX + " - Y: " + evento.pageY)
+				});
+			})
+		</script>
+	</head>
+	<body>
+	    <h1>Trabajando con el objeto evento y mousemove</h1>
+		<p>Mueve el ratón por la pantalla...</p>
+	</body>
+</html>
+
+

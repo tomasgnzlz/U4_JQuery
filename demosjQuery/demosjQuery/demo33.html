@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <title>Método toggle()</title>
+	  <meta charset="utf-8">
+	  <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<button>Toggle</button>
+		<p>Hola</p>
+		<p style="display: none">Adios</p>
+		<p style="display: none">Hasta pronto</p>
+
+		<script>
+			$( "button" ).click(function() {
+				//Simplemente pone el resto de párrafos visibles
+				$( "p" ).toggle();
+			});
+		</script>
+	</body>
+</html>
+

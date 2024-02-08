@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Funciones CSS en jQuery</title>
+        <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>   
+        <script type="application/x-javascript">
+            function dimensionCapa(capa){
+                capa = $(capa);
+                var dimensiones = "";
+                dimensiones += "Dimensiones internas: " + capa.innerWidth() + "x" + capa.innerHeight();
+                dimensiones += "\nDimensiones externas: " + capa.outerWidth() + "x" + capa.outerHeight();
+                alert(dimensiones);
+            }
+            function posicionCapa(capa){
+                capa = $(capa);
+                var posicion = "";
+                posicion += "Posición relativo al documento:\nLEFT: " + capa.offset().left + "\nTOP:" + capa.offset().top;
+                posicion += "\n\nPosición si no tuviera margen:\nLEFT: " + capa.position().left + "\nTOP:" + capa.position().top;
+                alert(posicion);
+            }
+            $(document).ready(function(){
+                $("#botondimensiones").click(function(){
+                    dimensionCapa("#capa1");  
+                });
+                $("#botonposicion").click(function(){
+                    posicionCapa("#capa1");  
+                });
+                $("#botontam").click(function(){
+                    $("#capa1").css("width", 200);
+                });
+                $("#botonmargen").click(function(){
+                    $("#capa1").css("margin", 20);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Funciones CSS en jQuery de dimensiones y posición</h1>
+        <p>Probando funciones de localización de elementos en la página...</p>
+        <div id="capa1" style="padding: 24px; background-color: #ffccdd; float: left; border: 2px dotted #666;">
+            <h2>capa1:</h2>
+            <p>Voy a crear esta capa para ver lo que mide y donde está posicionada.</p>
+        </div>
+        <br style="clear: both;">
+        <div style="margin: 10px;">
+            <button id="botondimensiones" type="button">Dimensiones de capa1</button>
+            <button id="botonposicion" type="button">Posicion de capa1</button>
+            <button id="botontam" type="button">Cambiar tamaño capa1</button>
+            <button id="botonmargen" type="button">Cambiar margen capa1</button>
+        </div>
+    </body>
+</html>

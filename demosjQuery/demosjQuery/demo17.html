@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Modificar varios atributos a la vez con attr()</title>
+		<meta charset="utf-8">
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+				alert("Se van a modificar 3 atributos de todos los enlaces");
+				$('a').attr({
+					'title': 'Title modificado por jQuery',
+					'target': '_blank',
+					'style': 'text-decoration: none'
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<a href="http://es.openoffice.org/" title="Suite Open Office">Open Office</a>
+		<br>
+		<a href="http://www.elpais.com" title="Diario El País">El País</a>
+		<br>
+		<a href="http://www.mozilla.org" title="Fundación Mozilla">Mozilla Fundation</a>
+	</body>
+</html>
+
+

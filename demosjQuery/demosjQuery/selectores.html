@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Comprobando el funcionamiento de los selectores</title>
+		<meta charset="utf-8">
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>	
+		<style type="text/css">
+			body{font-family: verdana, arial, helvetica;}
+			div{margin-bottom: 4px;}
+			.rojo{color: #CC0000;}
+			.verde{color: #00CC00;}
+			.azul{color: #0000CC;}
+			.fondogris{background-color: #cccccc;}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$("#boton").click(function(evento){
+					var selectorEscrito = $("#camposelector").val();
+					if (selectorEscrito==""){
+						alert("Escribe algo en el campo de texto")
+					}else{
+						var elementosSeleccionados = $(selectorEscrito);
+						elementosSeleccionados.fadeOut("slow").fadeIn("slow");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>SELECTORES EN jQuery</h1>
+		<p>Escribe en el campo de texto un selector y pulsa sobre el botón para ver qué elementos de la página has seleccionado.</p>
+		<form id="form-selectores">
+			<input type="text" name="camposelector" id="camposelector">
+			<input type="button" id="boton" value="COMPROBAR SELECCIÓN">
+		</form>
+		<p id="p1" class="rojo">Este es un párrafo con id="p1" y class="rojo"</p>
+		<p id="p2" class="verde">Este es un párrafo con id="p2" y class="verde" y aquí <i>meto una cursiva</i></p>
+		<p id="p3" class="rojo fondogris">Este es un párrafo con id="p3" y class="rojo fondogris"</p>
+		<p id="p4">Este es un párrafo con id="p4", sin class</p>
+		<p>Este es un párrafo con sin id ni class</p>
+		<div id="div1">Esto es una división con id="div1"</div>
+		<div id="div2" class="rojo">Esto es una división con id="div2" y class="rojo" y aqui <b>meto una negrita</b></div>
+		<div id="div3" class="verde fondogris">Esto es una división con id="div3" y class="verde fondogris"</div>
+		<div>Esto es una división sin id ni class</div>
+		<div class="azul">Esto es una división sin id, con class="azul"</div>
+		<b>Esto es una etiqueta b</b>
+		<i>Esto es una etiqueta i</i>
+	</body>
+</html>

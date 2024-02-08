@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Método css()</title>
+    <meta charset="utf-8">
+        <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <style>
+    	div#mi-capa{
+	      	background-color: black;
+	      	border-radius: 0.4em;
+	      	color:white;
+	      	margin:0;
+	      	padding: 1rem;
+	      	position: relative;
+	      	left:0px;
+	      	width: 25%;
+	    }
+	    p{margin:0;}
+    </style>
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		
+    		$("#mi-capa").mouseover(function(evento){
+    			var posactual=parseInt($(this).css("left"));
+    			$(this).css("left", posactual + 10 + "px");
+    		});
+    	})
+    </script>
+  </head>
+  <body>
+    <div id="mi-capa">
+    	<p>Esta es una capa creada para comprobar el funcionamiento del método css(). <br>
+    	Posiciona el cursor del ratón sobre la capa para que ésta se desplace 10px hacia la derecha.</p>
+    </div>
+  </body>
+</html>
+
+
+

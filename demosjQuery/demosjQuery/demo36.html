@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	    <title>Animación de color con jQuery</title>
+	    <meta charset="utf-8"> 
+		<style type="text/css">
+			body{font-family: sans-serif;}
+			h2{
+				padding: 1.9rem;
+				background-color: #9f9;
+				background-image: url("fondo-h2.png");
+				color: #009;
+				border-radius: 0.5rem;
+				width: 50%;}
+		</style>
+	    <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script src="jq/jquery.animate-colors-min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$("h1").animate({color: "#f80"}, 3000);
+			var iluminado = false;
+			$("h2").click(function(){
+				var elem = $(this);
+				if(iluminado){
+					elem.animate({"background-color": "#9f9"}, 500);
+				}else{
+					elem.animate({"background-color": "#ffc"}, 500);}
+				iluminado = !iluminado;
+			})
+		});
+		</script>
+	</head>
+	<body>
+	    <h1>Este título tiene una animación de cambio de color</h1>
+		<h2>Al hacer clic aquí se inicia una animación de cambio de color de fondo.</h2>
+	</body>
+</html>
+
+

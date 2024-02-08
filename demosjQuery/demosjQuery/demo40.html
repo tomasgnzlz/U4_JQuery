@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+      <title>Cola de efectos por defecto en jQuery</title>
+      <meta charset="utf-8">
+      <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+      <style>
+        div {
+          margin: 3px;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          left: 0px;
+          top: 30px;
+          background: green;
+          display: none;
+        }
+        div.newcolor {background: blue;}
+      </style>
+  </head>
+  <body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div></div>
+     
+    <script>
+      $('#start').click(function() {
+        $('div')
+          .show('slow')
+          .animate({left: '+=200'}, 2000)
+          .queue(function() {
+            $(this).addClass('newcolor').dequeue();
+          })
+          .animate({left: '-=200'}, 500 )
+          .queue(function() {
+            $(this).removeClass('newcolor').dequeue();
+          })
+          .slideUp();
+      });
+      $('#stop').click(function() {
+        $('div')
+          .queue('fx', [])
+          .stop();
+      });
+    </script>
+  </body>
+</html>
+
+

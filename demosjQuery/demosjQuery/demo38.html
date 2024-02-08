@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	<title>Cola de efectos por defecto en jQuery</title>
+	<meta charset="utf-8">
+	<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<style type="text/css">
+	#micapa{
+		position: relative;
+		font-size: 0.75em;
+		font-family: tahoma, verdana, sans-serif;
+		width: 30%;
+		color:white;
+		background-color: black;
+		padding: 0.4rem;
+		border: 1px solid #bbb;
+		border-radius: 0.5rem;
+	}
+	</style>
+	<script languague="javascript">
+		function colaEfectos(){
+			capa = $("#micapa");
+			capa.animate({"font-size": "1.5em"}, 2000);
+			capa.hide(1000);
+			capa.show(1000);
+			capa.slideUp();
+			capa.animate({"left": "350px","top": "50px"});
+			capa.slideDown();
+			capa.animate({"font-size": "0.75em"}, 2000);
+			capa.animate({"left": "100px","top": "20px"}, 1500, colaEfectos); //Función recursiva.
+		}
+		$(document).ready(function(){
+			colaEfectos();
+		});
+	</script>
+	</head>
+	<body>
+	    <div id="micapa">Esta capa primero aumenta el tamaño de la fuente, luego se oculta, después se muestra, a continuación se desplaza y se vuelve a reducir la fuente y se vuelve a desplazar. Todas las animaciones están dentro de una función recursiva que se llama a sí misma.</div>
+	</body>
+</html>
+
+
+

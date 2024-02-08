@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Diferencia entre prop() y attr()</title>
+    <meta charset="utf-8">
+        <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <style>
+      p {margin: 20px 0 0;}
+      b {color: blue;}
+    </style>
+  </head>
+  <body>
+    <input id="check1" type="checkbox" checked="checked">
+    <label for="check1">Check me</label>
+    <p></p>
+     
+    <script>
+    $( "input" ).change(function() {
+      var $input = $( this );
+      $( "p" ).html(
+        ".attr( \"checked\" ): <b>" + $input.attr( "checked" ) + "</b><br>" +
+        ".prop( \"checked\" ): <b>" + $input.prop( "checked" ) + "</b><br>" +
+        ".is( \":checked\" ): <b>" + $input.is( ":checked" ) ) + "</b>";
+    }).change();
+    </script>
+  </body>
+</html>

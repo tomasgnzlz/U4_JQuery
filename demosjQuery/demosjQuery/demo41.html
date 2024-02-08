@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Cola con delay() en jQuery</title>
+		<meta charset="utf-8">
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>	
+		<style type="text/css">
+		#micapa{
+			left: 20px;
+			top: 20px;
+			position: absolute;
+			font-size: 0.75em;
+			font-family: tahoma, verdana, sans-serif;
+			width: 740px;
+			background-color: #ddf;
+			padding: 10px;
+			border: 1px solid #bbb;
+		}
+		</style>
+		<script languague="javascript">
+		function colaEfectos(){
+			capa = $("#micapa");
+			capa.slideUp(1000);
+			capa.delay(2000);
+			capa.slideDown(1000);
+			capa.fadeTo(1500, 0.3).delay(3000).fadeTo(500, 1);
+			capa.delay(500);
+			capa.animate({
+				"font-size": "+=0.5em"
+			}, 1000, colaEfectos);
+			//alert (capa.queue().length)
+		}
+		$(document).ready(function(){
+			colaEfectos();
+		});
+	</script>
+
+	</head>
+	<body>
+	    <div id="micapa">Vamos a ejecutar varios métodos para hacer una cola de efectos, pero vamos a ponerles un retardo entre unos y otros.</div>
+	</body>
+</html>

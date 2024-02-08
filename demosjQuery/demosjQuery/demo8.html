@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Agregar elementos con la función jQUERY</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+	<script>
+		$(document).ready(function(){
+			var nuevosElementos = $("<div>Estos elementos los estoy creando en <b>tiempo de ejecución con jQuery</b>.<h1>Título metido en ejecución</h1></div>");
+			nuevosElementos.appendTo("body");
+		});
+	</script>
+	</head>
+	<body>
+		<p>Esto es el cuerpo de la página, que tiene poca cosa...</p>
+	</body>
+</html>
+
+

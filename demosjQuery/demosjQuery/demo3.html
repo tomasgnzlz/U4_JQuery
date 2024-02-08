@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html lang="es">
+	<head>
+		<title>Script con jQuery</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>	
+		<script>
+			$(document).ready(function(){
+				$("#capa").mouseenter(function(evento){
+					$("#mensaje").css("display", "block");
+				});
+				$("#capa").mouseleave(function(evento){
+					$("#mensaje").css("display", "none");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="capa" style="padding: 10px; background-color: #ff8800;">Pon el ratón encima de esta capa</div>
+		<br>
+		<div id="mensaje" style="display: none;">Ahora puedes ver la capa oculta</div>
+	</body>
+</html>
+

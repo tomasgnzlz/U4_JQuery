@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        div#prueba{
+            height:10rem; 
+            width: 20rem; 
+            background-color:#000000;
+            padding:2rem;
+            border-radius: 0.5rem;
+        }
+        div#prueba > span{
+            height:3rem;
+            width: 4rem; 
+            background-color:#dddddd;
+            padding:1rem;
+            border-radius: 0.4rem;
+        }
+    </style>
+    <script src="jq/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var counteenter = 0;
+            var countleave=0;
+            //$("#prueba").mouseover(function(){
+            $("#prueba").mouseenter(function(){
+                counteenter++;
+    		    $("div#contador > p#entrada").html("Eventos de entrada del ratón:" + counteenter);
+  	        });
+ 
+	        //$("#prueba").mouseout(function(){
+            $("#prueba").mouseleave(function(){
+                countleave++;
+                $("div#contador > p#salida").html("Eventos de salida del ratón:" + countleave);
+ 	        });
+        });
+    </script>
+</head>
+<body>
+    <div id="prueba">
+	    <span>Prueba a mover el ratón sobre este texto</span>
+    </div>
+    <div id="contador">
+        <p id="entrada">Eventos de entrada del ratón: 0</p>
+        <p id="salida">Eventos de salida del ratón: 0</p>
+    </div>
+</body>
+</html>

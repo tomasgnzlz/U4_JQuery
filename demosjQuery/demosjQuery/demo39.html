@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<title>Cola de efectos por defecto en jQuery</title>
+		<meta charset="utf-8">
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		  <style>
+			  div {
+			    margin: 3px;
+			    width: 40px;
+			    height: 40px;
+			    position: absolute;
+			    left: 0px;
+			    top: 60px;
+			    background: green;
+			    display: none;
+			  }
+			  div.newcolor{background: blue;}
+			  p{color: red;}
+		  </style>
+	</head>
+	<body>
+		<p>La longitud de la cola es: <span></span></p>
+		<div></div>
+		<script>
+			var div = $('div');
+			function runIt(){
+			  div
+			    .show('slow')
+			    .animate({left: '+=200'}, 2000)
+			    .slideToggle(1000)
+			    .slideToggle('fast')
+			    .animate({left: '-=200'}, 1500)
+			    .hide('slow')
+			    .show( 1200 )
+			    .slideUp('normal', runIt);
+			}
+			function showIt() {
+			  var n = div.queue('fx');
+			  $('span').text(n.length);
+			  setTimeout(showIt, 100);
+			}
+			runIt();
+			showIt();
+		</script>
+	</body>
+</html>
+
+

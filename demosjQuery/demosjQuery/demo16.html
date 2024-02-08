@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Modificar el valor de atributos con attr()</title>
+		<meta charset="utf-8">
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+				alert("A continuación se van a cambiar los tipos de viñetas de la lista");
+				$('li').attr("type", "square");
+			});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>Elemento de lista 1</li>
+			<li>Elemento de lista 2</li>
+			<li>Elemento de lista 3</li>
+			<li>Elemento de lista 4</li>
+		</ul>
+	</body>
+</html>
+

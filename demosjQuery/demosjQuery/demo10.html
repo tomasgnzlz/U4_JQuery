@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Probando each()</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+				$("div").each(function(i){
+					elemento = $(this);
+					if(elemento.html() == "white")
+						return true;
+					if(elemento.html() == "nada")
+						return false;
+					elemento.css("color", elemento.html());
+				});
+			}); 
+		</script>
+	</head>
+	<body>
+		<div>red</div>
+		<div>blue</div>
+		<div>red</div>
+		<div>white</div>
+		<div>red</div>
+		<div>green</div>
+		<div>orange</div>
+		<div>red</div>
+		<div>nada</div>
+		<div>red</div>
+		<div>blue</div>
+	</body>
+</html>
+

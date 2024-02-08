@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Evento hover</title>
+    <meta charset="utf-8">
+    <script src="jq/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script language="javascript">
+      $(document).ready(function(){
+        $("ul#menu > li").hover(function(){
+          $(this).toggleClass("opcion-activa");
+          }
+        );
+      });
+    </script>
+    <style>
+      ul{list-style: none;}
+      li{cursor: pointer; padding: 0.4rem 0;}
+      .opcion-activa{background-color: lightblue;}
+    </style>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>NOVEDADES</li>
+      <li>MUJER</li>
+      <li>HOMBRE</li>
+      <li>KIDS</li>
+      <li>ACCESORIOS</li>
+    </ul>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Probando each()</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+				$("p").each(function(i){
+					if(i%2==0){
+						$(this).css("background-color", "#eee");
+					}else{
+						$(this).css("background-color", "#ccc");
+					}
+				});
+			}); 
+		</script>
+	</head>
+	<body>
+		<p>Primer párrafo</p>
+		<p>Otro párrafo</p>
+		<p>Tecer párrafo</p>
+		<p>Uno más</p>
+		<p>y acabo...</p>
+	</body>
+</html>
+

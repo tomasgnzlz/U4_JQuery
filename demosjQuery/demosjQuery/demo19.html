@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Método removeAttr()</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){
+				$("#borrar-estilo").click(function(i){
+					$("p").removeAttr('style');
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<p style="padding: 1rem; background-color: black; color:white; border-radius: 0.5rem;">
+			Este es el párrafo que vamos a utilizar de ejemplo para probar el método removeAttr() que permite borrar por completo un atributo de un elemento previamente seleccionado.
+			<br>
+			Al borrar el atributo, el elemento toma los valores por defecto que tenga configurado el navegador para dicho atributo eliminado.
+		</p>
+		<input type="Button" id="borrar-estilo" value="BORRAR ESTILO">
+	</body>
+</html>
+
+
+

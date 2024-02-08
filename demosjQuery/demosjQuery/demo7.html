@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Probando Callback</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<style type="text/css">
+			div#micapa{
+				background-color: #CC7700; 
+				border-radius: 0.5rem;
+				color:#FFFFFF; 
+				padding:1rem; 
+				width: 30%;
+				position: relative;}
+		</style>		
+		<script>
+			$(document).ready(function(){
+
+				$("#iniciar-llamadas").click(function(event){
+					$("#micapa").fadeOut(2000, function(){
+						$("#micapa").css({'left':200});
+						$("#micapa").fadeIn(2000);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="micapa">
+			<p>Con Callback los efectos se repoducen siguiendo el orden de aparición en el código. Hasta que no finaliza una función no comienza la siguiente. Ahora la capa desaparece y aparece en una posición más a la derecha.</p>
+		</div>
+		<br>
+		<img src="play.png" alt="Reproducir animación" width="50" id="iniciar-llamadas">
+	</body>
+</html>
+

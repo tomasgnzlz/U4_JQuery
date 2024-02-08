@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	    <title>Trabajando con el objeto evento</title>
+	    <meta charset="utf-8">
+	    <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script> 
+		<script>
+			$(document).ready(function(){
+				$(document).click(function(evento){
+					alert("X: " + evento.pageX + " - Y: " + evento.pageY)
+				});
+			})
+		</script>
+	</head>
+	<body>
+	    <h1>Trabajando con el objeto evento</h1>
+		<p>Haz clic en cualquier parte de la página...</p>
+	</body>
+</html>
+
+

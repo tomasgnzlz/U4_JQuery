@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Probando la función data()</title>
+  <meta charset="utf-8">
+  <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <style>
+    div {margin: 5px;background: yellow;}
+    button {margin: 5px;font-size: 14px;}
+    p {margin: 5px;color: blue;}
+    span {color: red;}
+  </style>
+</head>
+<body>
+  <div>En el elemento div... </div>
+  <button>Almacenar el dato "variable" con el valor "Hola"</button>
+  <button>Extraer el valor del dato "variable"</button>
+  <button>Almacenar en el dato "variable" el valor "86"</button>
+  <button>Borrar el dato "variable" del div</button>
+  <p>El valor de "variable" en el div es <span>?</span></p>
+  <script>
+    $( "button" ).click(function() {
+      var value;
+      switch ( $( "button" ).index( this ) ) {
+        case 0 :
+          $( "div" ).data( "variable", "hola" );
+          value = "¡Valor almacenado correctamente!";
+          break;
+        case 1 :
+          value = $( "div" ).data( "variable" );
+          break;
+        case 2 :
+          $( "div" ).data( "variable", 86 );
+          value = "¡Valor almacenado correctamente!";
+          break;
+        case 3 :
+          $( "div" ).removeData( "variable" );
+          value = "¡Variable 'variable' borrada";
+          break;
+      }
+      //Inserta texto en la etiqueta span
+      $( "span" ).text( "" + value );
+    });
+  </script>
+  </body>
+</html>
+

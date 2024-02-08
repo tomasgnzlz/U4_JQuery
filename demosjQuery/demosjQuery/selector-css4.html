@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Probando los selectores de CSS</title>
+		<script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script>
+			$(document).ready(function(){		
+				//selectores prev + next
+				$("i + b").css("font-size", "40px");
+			});
+		</script>
+	</head>
+	<body>
+		<p class="destacado">
+			<i>Hola</i> <b>esto</b> es un <b>párrafo</b> <i>para</i> probar <b>los selectores.</b>
+		</p>
+		<p>
+			En este <b>párrafo</b> comprobamos <i>el comportamiento</i> del <b>selector.</b>
+		</p>
+	</body>
+</html>
+
+

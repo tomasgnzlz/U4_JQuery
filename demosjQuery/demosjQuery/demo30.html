@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+	    <title>Trabajando con eventos de teclado en jQuery</title>
+	    <script src="jq/jquery-3.1.1.min.js" type="text/javascript"></script> 
+		<script>
+			$(document).ready(function(){
+				$(document).keypress(function(e){
+					e.preventDefault();
+					$("#tecla-pulsada").html(e.which + ": " + String.fromCharCode(e.which))
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<h2>La función String.fromCharCode(e.which) nos permite saber la tecla pulsada a través de su código</h2>
+		<h3>Pulsa alguna tecla para comprobar su funcionamiento...</h3>
+		<div id="tecla-pulsada"></div>
+	</body>
+</html>
+
+
+
+
