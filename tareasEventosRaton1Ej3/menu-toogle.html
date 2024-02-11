@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+	<title>Menu-Toogle</title>
+	<script src="jquery-3.7.1.min.js" type="text/javascript"></script>
+	<script>
+
+		$(document).ready(function () {
+
+			$("nav.main-menu a").hover(function () {
+
+				$(this).css("background-color","white");
+				$(this).css("color","black");
+				$(this).css("font-weight","bold");
+
+			}, function () {
+
+				$(this).css("background-color","rgb(39, 39, 39)");
+				$(this).css("color","lightblue");
+				$(this).css("font-weight","100");
+				
+
+
+			});
+		})
+
+	</script>
+
+</head>
+
+<body>
+	<main class="main-container">
+		<input type="checkbox" id="hamburger" />
+		<label for="hamburger" class="menu-toogle">
+			<span class="menusbar"></span>
+			<span class="menusbar"></span>
+			<span class="menusbar"></span>
+		</label>
+		<nav class="main-menu">
+			<a href="#" class="item-menu current">Item Menú 1</a>
+			<a href="#" class="item-menu">Item Menú 2</a>
+			<a href="#" class="item-menu">Item Menú 3</a>
+			<a href="#" class="item-menu">Item Menú 4</a>
+			<a href="#" class="item-menu">Item Menú 5</a>
+		</nav>
+	</main>
+</body>
+
+</html>
