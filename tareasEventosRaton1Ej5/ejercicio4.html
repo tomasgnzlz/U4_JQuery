@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="estilos4.css">
+    <script src="jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script>
+			
+			$(document).ready(function(){
+
+        // Para cuando haga focos
+        $("form #correo,#contraseña").focusin(function () {
+            $(this).css("background-color","yellow");
+        })
+
+        // Para cuando deje de hacer foco
+        $("form #correo,#contraseña").focusout(function () {
+            $(this).css("background-color","white");
+        })
+
+			})
+			
+		</script>
+</head>
+
+<body>
+      <main>
+        <article>
+            <h2>Iniciar Sesión</h2>
+            <form action="demo_form.asp" method="get">
+                
+                <input type="email" name="correo" id="correo" placeholder="Email" pattern="^[a-zA-Z0-9.!#$%&*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required />
+                
+                
+                <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" pattern="[0-9]{8}">
+                
+                <a href="">Recuperar contraseña</a>
+                <input type="button" value="Iniciar Sesion" id="boton">
+               </form>
+        </article>
+      </main>
+</body>
+</html>

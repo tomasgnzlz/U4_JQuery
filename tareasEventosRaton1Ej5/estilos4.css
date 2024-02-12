@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+h2{
+    margin-left: 0.5em;
+}
+a{
+    margin-left: 1.5em;
+    text-decoration: none;
+    color: black;
+}
+input{
+    margin: 1em;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 1em;
+    max-width: 800px;
+}
+
+input::placeholder{
+    color: black;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+#boton{
+    color: burlywood;
+    border-radius: 20px;
+    height: 3em;
+    background-color: black;
+    width: 50%;
+    font-weight: bold;
+    
+}
