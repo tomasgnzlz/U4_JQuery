@@ -20,9 +20,39 @@
 
 		$(document).ready(function () {
 
-			$("nav#menu-principal > ul#menu").scroll().css().reset();
+			$(window).resize(function () {
 
-		})
+				if ($('#hamburguesa').is(':checked')) {
+					$('#hamburguesa').prop("checked", false);
+				}
+
+			});
+
+
+			// cuando se haga scroll en la pagina que haga esto
+			$(window).scroll(function () {
+				
+				if ($(this).scrollTop() > 0) {
+					$("header").addClass("fijadoHeader");
+					$("main").addClass("fijadoMain");
+					
+				} else{
+					$("header").removeClass("fijadoHeader");
+					$("main").removeClass("fijadoMain");
+				}
+
+			});
+
+
+
+
+
+
+
+
+
+
+		});
 
 	</script>
 </head>

@@ -1,5 +1,19 @@
 *{
 	box-sizing:border-box;
+	margin: 0;
+	
+}
+
+.fijadoHeader{
+	position: fixed;
+	background-color: lightblue;
+	width: 100%;
+	padding: .5rem;
+	opacity: 0.75;
+}
+
+.fijadoMain{
+	margin-top: 6.5rem;
 }
 /*Comenzamos con la versión móvil*/
 
