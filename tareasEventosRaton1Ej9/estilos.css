@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: lightblue;
+}
+a {
+  text-decoration: none;
+  color: lightblue;
+  border-bottom: solid lightgray 1px;
+  padding: 1rem;
+  text-align: center;
+}
+
+main.main-container {
+  display: flex;
+}
+main.main-container > input#hamburger {
+  display: none;
+}
+
+main.main-container > label.menu-toogle {
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  background-color: rgb(39, 39, 39);
+  transition: transform 0.8s ease;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+main.main-container > label.menu-toogle span {
+  width: 1.5rem;
+  height: 0.25rem;
+  background-color: white;
+  margin: 2px;
+}
+
+main.main-container > nav.main-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(39, 39, 39);
+  width: 15rem;
+  order: -1;
+  position: absolute;
+  left: -15rem;
+  transition: transform 0.8s ease;
+  height: 100%;
+  
+}
+main.main-container > nav.main-menu >a:nth-child(1){
+    margin-top: 5rem;
+    border-top: solid lightgray 1px;
+}
+/*MENÚ*/
+
+input#hamburger:checked ~ nav.main-menu {
+  transform: translate(15rem, 0);
+}
+
+input#hamburger:checked ~ label {
+  transform: translate(15rem, 0);
+}
