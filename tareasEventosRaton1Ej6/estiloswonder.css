@@ -6,11 +6,11 @@
 
 .fijadoHeader{
 	position: fixed;
-	background-color: lightblue;
+	background-color: white;
 	width: 100%;
-	padding: .5rem;
 	opacity: 0.75;
 }
+
 
 .fijadoMain{
 	margin-top: 6.5rem;
