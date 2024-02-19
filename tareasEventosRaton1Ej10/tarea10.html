@@ -9,20 +9,22 @@
     <script>
         $(document).ready(function () {
           // Oculto los 3 textos con informacion
-              $("section > div.texto").fadeOut();
+              $("section > div.texto").fadeOut(); // display none
               // Cuando haga click se muestra el texto que corresponda
               $("section > div").on({
                   click: function () {
                     // como caso base lo vuelvo a oxultar, sino no se me oculta cuando los muestro, me deja mostrar todos a la vez.
                     $("section > div.texto").fadeOut();
+                    
                       
                       if ($(this).siblings(".texto").is(":hidden")) {
                             $(this).siblings(".texto").fadeIn(200);
-                            $("section > div").find("svg:nth-child(2)").fadeOut(200);
-                            
+                            //$("section > div").find("svg:nth-child(2)").fadeOut(200);
+                            $(this).find("svg:nth-child(2)").fadeOut(200);
                       }else{
                             $(this).siblings(".texto").fadeOut(200);
-                            $("section > div").find("svg:nth-child(2)").fadeIn(200);
+                            //$("section > div").find("svg:nth-child(2)").fadeIn(200);
+                            $(this).find("svg:nth-child(2)").fadeIn(200);
                       }
                   }
               });

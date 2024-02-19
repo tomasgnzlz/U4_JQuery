@@ -1,0 +1,246 @@
+*{box-sizing:border-box;}
+/*Comenzamos con la versión móvil*/
+/*Hacemos el cuerpo de la web flexible*/
+body{
+	font-size: 16px;
+	display:flex;
+	margin:0;
+	flex-flow: column nowrap;
+}
+/*Estilo para todos los enlaces de la web*/
+a{
+	color:black;
+	text-decoration: none;
+}
+a:hover{
+	cursor:pointer;
+}
+ul{
+	list-style: none;
+	padding-left: 0;
+}
+/*ESTILO DE LA CABECERA*/
+header#top{
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	text-align: center;
+}
+header#top > div{
+	order:1;
+	flex:100%;
+
+	display:flex;
+	align-items: center;
+	box-shadow: 2px 1px 10px #888888;
+}
+header#top > div > nav#menu-principal{
+	order:1;
+	flex:10%;
+}
+header#top > div > nav#menu-principal > span{
+	font-size: 2.2rem;
+	color:#454545;
+	font-weight: bold;
+}
+header#top > div > nav#menu-principal > span:hover{
+	color:grey;
+	cursor:pointer;
+}
+header#top > div > nav#menu-principal > ul#menu{
+	display:block;
+	position: absolute;
+	top:2.87rem;
+	width: 18rem;
+	padding-left: 0.5rem;
+	border:1px solid lightgrey;
+	background-color: white;
+	text-align: left;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+header#top > div > nav#menu-principal > ul#menu > li{
+	padding: 0.5rem;
+}
+header#top > div > nav#menu-principal > ul#menu > li > a{
+	display:flex;
+	justify-content: space-between;
+}
+header#top > div > nav#menu-principal > ul#menu > li > ul{
+	display:none;
+	padding-left: 1rem;
+}
+header#top > div > nav#buscador{
+	order:2;
+	flex:10%;
+}
+header#top > div > nav#buscador > ul i{
+	font-size: 1.6rem;
+	color:#454545;
+}
+header#top > div > nav#buscador > ul i:hover{
+	color:grey;
+}
+header#top > div > a{
+	order:3;
+	flex: 60%;
+}
+header#top > div> a > picture > img#logo{
+	width: 10rem;
+}
+header#top > div > nav#deseos{
+	order:4;
+	flex:10%;
+}
+header#top > div > nav#deseos > ul i{
+	font-size: 1.5rem;
+	color:#454545;
+}
+header#top > div > nav#deseos > ul i:hover{
+	font-size: 1.5rem;
+	color:grey;
+}
+header#top > div > nav#compra{
+	order:5;
+	flex:10%;
+}
+header#top > div > nav#compra > ul{
+	padding-left: 0;
+}
+header#top > div > nav#compra > ul i{
+	font-size: 1.6rem;
+	color:#454545;
+}
+header#top > div > nav#compra > ul i:hover{
+	color:grey;
+}
+header#top > nav#menu-secundario{
+	order:2;
+	flex:100%;
+}
+header#top > nav#menu-secundario > ul{
+	display:flex;
+	justify-content: space-around;
+	margin:0;
+	padding: 0.5rem 0;
+}
+header#top > nav#menu-secundario > ul > li > a{
+	font-family: 'Open Sans Condensed', sans-serif;
+	color:black;
+	font-weight: bold;
+}
+header#top > nav#menu-secundario > ul > li > a:hover{
+	color:#454545;
+	text-decoration: none;
+}
+header#top > p#promo{
+	order:3;
+	flex:100%;
+	background-color: black;
+	padding:0.5rem 0; 
+	margin:0;
+}
+header#top > p#promo:hover{
+	opacity: 0.8;
+}
+header#top > p#promo > a{
+	color:gold;
+	font-weight: bold;
+}
+main{
+	display:flex;
+	flex-flow: row wrap;
+}
+main > article.item{
+	flex: 0 1 50%;
+
+	display:flex;
+	flex-flow:column;
+	padding: 0.8rem;
+}
+main > article.item > a:first-child{order:2;}
+main > article.item > a:first-child > h3{
+	margin: 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding-left: 1rem;
+}
+main > article.item > a:last-child{
+	order:1;
+}
+main > article.item > a:last-child > picture > img{
+	width: 100%;
+	height: auto;
+}
+main > article.item > p {
+	order:3; 
+	margin:0;
+	font-family: 'Nunito', sans-serif;
+	padding-left: 1rem;
+}
+footer{
+	display:flex;
+	flex-flow: row wrap;
+}
+footer > nav#menu-adicional{
+	flex:100%;
+}
+footer > nav#menu-adicional > ul{
+	display:flex;
+	flex-flow: column;
+	padding: 0 1rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+footer > nav#menu-adicional > ul > li{
+	flex:33.33%;
+	color:grey;
+	border-top: 1px solid grey;
+	padding: 0.5rem 0;
+}
+footer > nav#menu-adicional > ul > li > a{
+	padding-left: 1rem;
+}
+footer > nav#menu-adicional > ul > li:last-child{
+	border-bottom: 1px solid grey;
+}
+footer > nav#menu-adicional > ul > li:hover{
+	background-color: lightgrey;
+	border-radius: 0.2rem;
+}
+footer > nav#iconos-sociales{
+	flex:100%;
+}
+footer > nav#iconos-sociales > ul{
+	display:flex;
+	justify-content: center;
+
+	list-style: none;
+	color:grey;
+}
+footer > nav#iconos-sociales > ul li{
+	padding-right: 1.2rem;
+	font-size: 1.9rem;
+}
+footer > nav#iconos-sociales > ul > li i{
+	color:grey;
+}
+footer > nav#iconos-sociales > ul > li i:hover{
+	color:black;
+}
+div#volverarriba{
+	color:#454545;
+	font-family: 'Open Sans Condensed', sans-serif;
+	width: 8rem;
+	background-color: lightgrey;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	position: fixed;
+	opacity: 0.7;
+	display:none;
+}
+div#volverarriba > a{
+	display: flex;
+	justify-content: space-between;
+	border:1px solid grey;
+	padding: 0.2rem 1rem;
+}
