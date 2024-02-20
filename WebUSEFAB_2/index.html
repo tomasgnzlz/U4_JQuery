@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>JUSTFAB</title>
+    <meta charset="utf-8">
+    <meta content="Tomas Gonzalez Atienza" name="author" >
+    <meta content="Diseño de Aplicaciones Web" name="description" >
+    <meta content="diseño web, responsive web design" name="keywords" >
+    <meta name="robots" content="index, follow" >
+    <meta name="lang" content="es-ES" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="estilos-justfab.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jq/script.js"></script>
+    
+    <!--<script src="inc/jquery.mb.CSSAnimate.js"></script>
+    <script src="inc/jquery.mb.browser.min.js"></script>-->
+
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a href="#">BOTAS <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+            <ul>
+                <li><a href="#">Todas las Botas</a></li>
+                <li><a href="#">Botines</a></li>
+                <li><a href="#">Botas de tacón</a></li>
+                <li><a href="#">Botas planas</a></li>
+                <li><a href="#">Botas Mostequeras</a></li>
+                <li><a href="#">Botas de caña ancha</a></li>
+            </ul>
+        </li>
+        <li><a href="#">NOVEDADES<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+            <ul>
+                <li><a href="#">Ver novedades</a></li>
+                <li><a href="#">Zapatos</a></li>
+                <li><a href="#">Ropa</a></li>
+                <li><a href="#">Bolsos</a></li>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Tallas grandes</a></li>
+            </ul>
+        </li>
+        <li><a href="#">ZAPATOS<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+            <ul>
+                <li><a href="#">Todas los Zapatos</a></li>
+                <li><a href="#">Todas la Botas</a></li>
+                <li><a href="#">Botines</a></li>
+                <li><a href="#">Botas Mosqueteras</a></li>
+                <li><a href="#">Botas de tacón</a></li>
+                <li><a href="#">Botas planas</a></li>
+                <li><a href="#">Botas de caña ancha</a></li>
+                <li><a href="#">Sneakers</a></li>
+                <li><a href="#">Mocasines & Oxfords</a></li>
+                <li><a href="#">Tacones</a></li>
+                <li><a href="#">Todos los zapatos planos</a></li>
+                <li><a href="#">Todas las Sandalias</a></li>
+            </ul>
+        </li>
+        <li><a href="#">ROPA<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+            <ul>
+                <li><a href="#">Toda la Ropa</a></li>
+                <li><a href="#">Chaquetas, Cazadoras y Abrigos</a></li>
+                <li><a href="#">Jerséis y Cárdigans</a></li>
+                <li><a href="#">Vestidos</a></li>
+                <li><a href="#">Jeans</a></li>
+                <li><a href="#">Tops, camisas y blusas</a></li>
+                <li><a href="#">Pantalón</a></li>
+                <li><a href="#">Faldas</a></li>
+                <li><a href="#">Tallass grandes</a></li>
+            </ul>
+        </li>
+        <li><a href="#">BOLSOS<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+            <ul>
+                <li><a href="#">Todos los bolsos</a></li>
+                <li><a href="#">Bolsos bandolera y Clutches</a></li>
+                <li><a href="#">Bolsos Tote</a></li>
+                <li><a href="#">Bolsos de hombro y mochilas</a></li>
+                <li><a href="#">Bolsos Satchel</a></li>
+            </ul>
+        </li>
+        <li><a href="#">ACCESORIOS<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+            <ul>
+                <li><a href="#">Accesorios</a></li>
+                <li><a href="#">Accesorios para el frío</a></li>
+                <li><a href="#">Sombresos y Acces. para el pelo</a></li>
+                <li><a href="#">Fulares</a></li>
+                <li><a href="#">Gafas de Sol</a></li>
+                <li><a href="#">Toda la Bisutería</a></li>
+                <li><a href="#">Collares y gargantillas</a></li>
+                <li><a href="#">Pendientes</a></li>
+                <li><a href="#">Pulseras</a></li>
+                <li><a href="#">Anillos</a></li>
+            </ul>
+        </li>
+        <li><a href="#">TENDENCIAS<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+            <ul>
+                <li><a href="#">Tendencias de invierno</a></li>
+                <li><a href="#">Tendencias terracota</a></li>
+                <li><a href="#">Disponibles de nuevo</a></li>
+                <li><a href="#">Ver todas las tendencias</a></li>
+            </ul>
+        </li>
+        <li><a href="#">LOOKS</a></li>
+        <li><a href="#">OFERTAS</a></li>
+    </ul>
+
+
+    <div id="oscuro"></div>
+
+    <div id="desplazable">
+
+
+        <header id="top">
+            <div>
+                <a href="index.html">
+                    <picture><img id="logo" src="logo-bw.svg" alt="LOGO LODI"></picture>
+                </a>
+                <!-- Menú principal -->
+                <nav id="menu-principal">
+                    <span>&#9776;</span>
+
+                </nav>
+                <!--Bloque de enlaces con iconos -->
+                <nav id="buscador">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+                <nav id="deseos">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+                <nav id="compra">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav id="menu-secundario">
+                <ul>
+                    <li><a href="#">Los más vendidos</a></li>
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Tendencias</a></li>
+                    <li><a href="#">Looks</a></li>
+                    <li><a href="#">Outlet</a></li>
+                </ul>
+            </nav>
+            <p id="promo"><a href="#">-50% EN TU PRIMER ARTÍCULO</a></p>
+        </header>
+
+
+        <!--Contenido principal con los productos -->
+        <main>
+
+            <article class="item">
+                <a href="#">
+                    <h3>XARENI ADVOCAT</h3>
+                </a>
+                <p>145€</p>
+                <a href="#">
+                    <picture><img src="img/zapato1.jpg" alt="ZAPATO XARENI ADVOCAT" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>COSTA RICA</h3>
+                </a>
+                <p>145€</p>
+                <a href="#">
+                    <picture><img src="img/zapato2.jpg" alt="ZAPATO COSTA RICA" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>VALS</h3>
+                </a>
+                <p> 139€</p>
+                <a href="#">
+                    <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>XARENI ADVOCAT</h3>
+                </a>
+                <p>145€</p>
+                <a href="#">
+                    <picture><img src="img/zapato1.jpg" alt="ZAPATO XARENI ADVOCAT" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>COSTA RICA</h3>
+                </a>
+                <p>145€</p>
+                <a href="#">
+                    <picture><img src="img/zapato2.jpg" alt="ZAPATO COSTA RICA" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>VALS</h3>
+                </a>
+                <p> 139€</p>
+                <a href="#">
+                    <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>COSTA RICA</h3>
+                </a>
+                <p>145€</p>
+                <a href="#">
+                    <picture><img src="img/zapato2.jpg" alt="ZAPATO COSTA RICA" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>VALS</h3>
+                </a>
+                <p> 139€</p>
+                <a href="#">
+                    <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>COSTA RICA</h3>
+                </a>
+                <p>145€</p>
+                <a href="#">
+                    <picture><img src="img/zapato2.jpg" alt="ZAPATO COSTA RICA" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+            <article class="item">
+                <a href="#">
+                    <h3>VALS</h3>
+                </a>
+                <p> 139€</p>
+                <a href="#">
+                    <picture><img src="img/zapato3.jpg" alt="ZAPATO VALS" width="380" height="524"></picture>
+                    <span class="comprar">COMPRAR</span>
+                </a>
+            </article>
+        </main>
+        <!--Pie de página -->
+        <footer>
+            <nav id="menu-adicional">
+                <ul>
+                    <li><a href="#">ATENCIÓN AL CLIENTE</a></li>
+                    <li><a href="#">MI CUENTA</a></li>
+                    <li><a href="#">¿CÓMO FUNCIONA JUSTFAB?</a></li>
+                </ul>
+            </nav>
+            <nav id="iconos-sociales">
+                <ul>
+                    <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+        <div id="volverarriba"><a href="#top">VOLVER ARRIBA <span><i class="fa fa-sort-asc" aria-hidden="true"></i></span></a></div>
+    </div>
+</body>
+
+</html>

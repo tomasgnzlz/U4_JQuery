@@ -5,28 +5,28 @@ $(document).ready(function () {
     Al volver a la parte superior de la página el botón se oculta. Al hacer clic sobre el botón 
     nos vamos a la parte superior de la página. Todo se hace con efectos. Debes controlar la 
     acumulación de efectos.
-
     5. Cuando haces un poco de scroll sobre la página debe aparecer con el efecto que consideres 
     más apropiado, la cabecera de la página fijada en la parte superior.
     */ 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 15) {
-            //$("#volverarriba").css("display", "flex");
-            $("#volverarriba").delay("slow").show(500);
-
+            $("#volverarriba").delay("slow").show(500)
+            //NO ME FUNCIONA EL BOTON DE VOLVER_ARRIBA SI DEJO LA CABECERA FIJADA¿?¿?¿?¿??¿??
+            /*
             $("header#top").css({
                 position: "fixed",
                 opacity: "90%",
-                width: "100%"
-            })
+                width: "100%",
+                backgroundColor: "white"
+            })*/
         } else{
-            //$("#volverarriba").css("display", "none");
-            $("#volverarriba").delay("slow").hide();
+            $("#volverarriba").delay("slow").hide()
+            /*
             $("header#top").css({
                 position: "",
                 opacity: "",
                 width: ""
-            })
+            })*/
         }
     });
     
@@ -34,7 +34,7 @@ $(document).ready(function () {
     $("ul#menu").css("display","none"); // _En principio lo oculto, y cuando el click lo enseño otra vez
     $("header#top > div > nav#menu-principal >span").on({
         click: function () {
-            $("ul#menu").toggle(500);
+            $("ul#menu").stop(true,true).toggle(500);
         }
     });
 
@@ -59,11 +59,9 @@ $(document).ready(function () {
                     transform: "rotate(180deg)",
                     transition: "transform 0.3s ease"
                 }); 
-                
             } else {
                 $(this).children("ul").slideUp(500);
                 $(this).find("span").css("transform", "rotate(0deg)"); 
-
             }
         }
     }); 
@@ -75,10 +73,17 @@ $(document).ready(function () {
 
     $("article.item img").on({
         mouseenter: function () {
-            $(this).attr("src", $(this).attr("src").replace('.jpg', '-1.jpg'));
+
+            // con el stop tue true elimino la cola de efectos que pueda haber
+            // esto por si paso sobre varias imagenes, que las anteriores no se cambien. 
+            // con el queue meto en una cola de efectos el mouseenter para poder darle un delay
+            $(this).stop(true, true).delay(3000).queue(function () {
+                $(this).attr("src", $(this).attr("src").replace(".jpg", "-1.jpg"));
+            });
         },
         mouseleave: function () {
-            $(this).attr("src", $(this).attr("src").replace("-1.jpg", ".jpg"));
+            $(this).stop(true, true).attr("src", $(this).attr("src").replace("-1.jpg", ".jpg"));
         }
     });
+    
 });
