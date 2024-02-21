@@ -4,7 +4,14 @@ $(document).ready(function () {
     1. Al hacer varias líneas de scroll en el documento se debe mostrar el botón VOLVER ARRIBA. 
     Al volver a la parte superior de la página el botón se oculta. Al hacer clic sobre el botón 
     nos vamos a la parte superior de la página. Todo se hace con efectos. Debes controlar la 
-    acumulación de efectos.
+    acumulación de efectos.*/
+
+    $("#volverarriba").on("click", function () {
+
+        $("html").animate({ scrollTop: 0 }, "slow");
+    });
+
+    /*
     5. Cuando haces un poco de scroll sobre la página debe aparecer con el efecto que consideres 
     más apropiado, la cabecera de la página fijada en la parte superior.
     */ 
@@ -12,21 +19,21 @@ $(document).ready(function () {
         if ($(this).scrollTop() > 15) {
             $("#volverarriba").delay("slow").show(500)
             //NO ME FUNCIONA EL BOTON DE VOLVER_ARRIBA SI DEJO LA CABECERA FIJADA¿?¿?¿?¿??¿??
-            /*
+            
             $("header#top").css({
                 position: "fixed",
                 opacity: "90%",
                 width: "100%",
                 backgroundColor: "white"
-            })*/
+            })
         } else{
             $("#volverarriba").delay("slow").hide()
-            /*
+            
             $("header#top").css({
                 position: "",
                 opacity: "",
                 width: ""
-            })*/
+            })
         }
     });
     
