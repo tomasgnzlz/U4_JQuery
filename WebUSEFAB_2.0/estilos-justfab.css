@@ -224,43 +224,53 @@ header#top > p#promo > a {
     font-weight: bold;
 }
 
+
+
 main {
+    /*display: flex;
+    flex-flow: row wrap;*/
+    display: flex;
+    flex-direction: column;
+}
+
+/*PONGO ESTO PARA DARLE EL FORMATO DE 2 EN 2 A LAS IMAGENES DE LOS ZAPATOS*/
+#parteArriba{
     display: flex;
     flex-flow: row wrap;
 }
+/**************************************************************************/
 
-main > article.item {
+/*main*/#parteArriba > article.item {
     flex: 0 1 50%;
-
     display: flex;
     flex-flow: column;
     padding: 0.8rem;
 }
 
-main > article.item > a:first-child {
+/*main */#parteArriba> article.item > a:first-child {
     order: 2;
 }
 
-main > article.item > a:first-child > h3 {
+/*main*/#parteArriba> article.item > a:first-child > h3 {
     margin: 0;
     font-family: 'Open Sans Condensed', sans-serif;
     padding-left: 1rem;
 }
 
-main > article.item > a {
+/*main */#parteArriba> article.item > a {
     position: relative;
 }
 
-main > article.item > a:last-child {
+/*main */#parteArriba> article.item > a:last-child {
     order: 1;
 }
 
-main > article.item > a:last-child > picture > img {
+/*main */#parteArriba> article.item > a:last-child > picture > img {
     width: 100%;
     height: auto;
 }
 
-main > article.item > p {
+/*main */#parteArriba> article.item > p {
     order: 3;
     margin: 0;
     font-family: 'Nunito', sans-serif;
@@ -347,4 +357,15 @@ div#volverarriba > a {
     justify-content: space-between;
     border: 1px solid grey;
     padding: 0.2rem 1rem;
+}
+
+/*ESTILOS SLIDER DEL PLUGIN BUSCADO*/
+.marcoSlider{
+    border: solid red 1px;
+    padding: 1rem;
+}
+.banner{
+    width: 450px;
+    margin: auto;
+    border: solid blue 1px;
 }

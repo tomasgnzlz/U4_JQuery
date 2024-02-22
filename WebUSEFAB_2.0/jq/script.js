@@ -38,30 +38,37 @@ $(document).ready(function () {
    2. Modifica el HTML y añade el código CSS necesario para que al posicionar el botón
    sobre un producto aparezca sobre el artículo un botón de COMPRA.
    */
-  var imgProductos = $("main > article")
+  //var imgProductos = $("main > article")
+  var imgProductos = $("#parteArriba > article")
+
   imgProductos.on({
     mouseenter: function () {
         
         var textoComprar = $(this).find(".comprar").text();
         var botonCompra = $("<span class='botonAñadir'>" + textoComprar + "</span>");
+        
         botonCompra.css({
-            "position": "absolute",
-            "top": "50%",
-            "left": "50%",
-            "background-color": "black",
-            "padding":"1rem",
-            "border-radius": "15px",
-            "font-weight": "bold",
-            "color":"white"
+          "position": "absolute",
+          "top": "50%",
+          "left": "50%",
+          "background-color": "black",
+          "padding": "1rem",
+          "border-radius": "15px",
+          "font-weight": "bold",
+          "color": "white",
+          "transform": "translate(-50%, -50%)" // Ajuste para centrar el botón
         });
+        
         $(this).find("a:last-child > picture > img").css("opacity", 0.8);
         $(this).find("a:last-child").append(botonCompra);
-    },
-    mouseleave: function () {
-      $(this).find("a:last-child > picture > img").css("opacity", 1);
+      },
+      mouseleave: function () {
+        $(this).find("a:last-child > picture > img").css("opacity", 1);
         $(this).find(".botonAñadir").remove();
-    }
+      }
 });
+
+
   // 3. Investiga como usar un Plugin para crear un slider y utilízalo en esta web. */
-  //$('.contenedor-imagenes-plugin').slick();
+  // en el html
 });

@@ -18,7 +18,6 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(this).scrollTop() > 15) {
             $("#volverarriba").delay("slow").show(500)
-            //NO ME FUNCIONA EL BOTON DE VOLVER_ARRIBA SI DEJO LA CABECERA FIJADA¿?¿?¿?¿??¿??
             
             $("header#top").css({
                 position: "fixed",
