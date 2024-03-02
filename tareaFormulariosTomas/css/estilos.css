@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main > div#content{
+    width: 500px;
+    padding-top: 4rem;
+    margin: 0 auto;
+    
+}
+
+main > div#content > form{
+    border: solid black 1px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+main > div#content > form >div{
+    margin: .5rem;
+}
+main > div#content > form  input,textarea{
+    width: 100%;
+    padding: .5rem;
+    border: solid black 1px;
+}
+
+p.texto-error-campos{
+    color: red;
+    padding: 5px;
+    opacity: 0;
+    font-size:10px;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    transform: opacity 0.5s ease;
+}
+input[type="button"]:hover{
+    background-color: black;
+    color: white;
+}

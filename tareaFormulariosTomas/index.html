@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <!--ESTILOS PLUGIN-->
+    <link rel="stylesheet" href="jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/funciones.js"></script>
+    <!--js plugin-->
+    <script src="jquery-ui-1.13.2.custom/jquery-ui-1.13.2.custom/jquery-ui.js"></script>
+</head>
+
+<body>
+    <main>
+            <div id="content">
+                <h2></h2>
+                <form action="../index.html" method="get">
+                    <div class="mod-contacto">
+                        <input type="text" name="nombreapellidos" id="nomape-acercade" placeholder="NOMBRE Y APELLIDOS" required/>
+                            <p class="texto-error-campos">Completa este campo para continuar</p>
+                    </div>
+                    <div class="mod-contacto">
+                        <input type="email" name="correoacercade" id="correo-acercade" placeholder="EMAIL" required/>
+                            <p class="texto-error-campos">Completa este campo para continuar</p>
+                    </div>
+                    <div class="mod-contacto">
+                        <input type="text" name="asunto" id="asunto-acercade" placeholder="ASUNTO" required/>
+                            <p class="texto-error-campos">Completa este campo para continuar</p>
+                    </div>
+                    <div class="mod-contacto">
+                        <textarea name="comentarios" id="id-textoarea" cols="52" rows="10" placeholder="COMENTARIOS...*" maxlength="10" required></textarea>
+                        <p class="texto-error-campos">Completa este campo para continuar</p>
+                        <p id="cantidad-caracteres">0/0</p>
+                        
+                    </div>
+                    <div class="mod-contacto">
+                        <h2>Prueba Plugin JQuery DatePicker</h2>
+                        <br>
+                        <input type="text" name="fecha" id="calendario" placeholder="17/06/2003">
+                    </div>
+
+
+
+                    <input type="button" value="ENVIAR" id="boton-error" />
+                </form>
+            </div>
+    </main>
+</body>
+
+</html>
