@@ -38,4 +38,5 @@ p.texto-error-campos{
 input[type="button"]:hover{
     background-color: black;
     color: white;
+    cursor: pointer;
 }

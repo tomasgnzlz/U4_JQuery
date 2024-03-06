@@ -15,7 +15,7 @@ $(document).ready(function () {
             nextSlider = 1,
             lengthSlider = pb.items.panels.length;
 
-
+        
 
         var imagenParada = false;
 
@@ -26,13 +26,15 @@ $(document).ready(function () {
             // consolo.log("Inicializando");
             SliderInit(); // Para inicializar el slider
 
-            for(var i=0; i<lengthSlider; i++){
+           for(var i=0; i<lengthSlider; i++){
                 if (i == 0) {
                     loscontroles += '<li class="active"></li>';
                 } else {
                     loscontroles +='<li></li>'
                 }
             }
+            
+            
 
             //console.log(loscontroles);
 
@@ -75,6 +77,22 @@ $(document).ready(function () {
                 cambiarPanel(currentSlider + 1);
             });
 
+             /*************************************************/
+            // 4. APARTADO 4 MEJORANDO SLIDER
+            /*************************************************/
+            $("#control-buttons li").mouseenter(function(){
+                $("#miniatura-container").css("display","flex");
+                var imagenPoner = $("ul.slider-wrapper li img").eq($(this).index()).attr("src");
+                $("#miniatura-container").html("<img src='" + imagenPoner + "' alt='Miniatura'>");
+            });
+            
+            $("#control-buttons li").mouseleave(function(){
+                //$("#miniatura-container").html("");
+                $("#miniatura-container").css("display","none");
+                
+            });
+            
+
 
         }
 
@@ -87,12 +105,6 @@ $(document).ready(function () {
             }
              
         }
-
-
-
-
-
-
 
         //////////////////
         pb.startSlider = function(){
@@ -113,8 +125,7 @@ $(document).ready(function () {
             paneles.eq(currentSlider).fadeOut("slow");
             paneles.eq(nextSlider).fadeIn("slow");
 
-            //console.log(nextSlider);
-
+            console.log(currentSlider);
             currentSlider=nextSlider;
             nextSlider+=1;
         }
@@ -154,10 +165,6 @@ $(document).ready(function () {
             // Reactivamos el Slider
             SliderInit();
         }
-
-
-
-
 
 
         return pb; // Devolvemos el objeto pb.
