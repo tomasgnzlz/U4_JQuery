@@ -19,6 +19,9 @@ $(document).ready(function () {
 
         var imagenParada = false;
 
+
+
+
         // Constructor del Slider
         pb.init = function(settings){
             this.settings = settings || {duration:1500}
@@ -26,15 +29,13 @@ $(document).ready(function () {
             // consolo.log("Inicializando");
             SliderInit(); // Para inicializar el slider
 
-           for(var i=0; i<lengthSlider; i++){
+          for(var i=0; i<lengthSlider; i++){
                 if (i == 0) {
                     loscontroles += '<li class="active"></li>';
                 } else {
                     loscontroles +='<li></li>'
                 }
             }
-            
-            
 
             //console.log(loscontroles);
 
@@ -80,19 +81,30 @@ $(document).ready(function () {
              /*************************************************/
             // 4. APARTADO 4 MEJORANDO SLIDER
             /*************************************************/
-            $("#control-buttons li").mouseenter(function(){
+            $("#control-buttons li ,#miniatura-imagenes li").mouseenter(function(){
                 $("#miniatura-container").css("display","flex");
                 var imagenPoner = $("ul.slider-wrapper li img").eq($(this).index()).attr("src");
                 $("#miniatura-container").html("<img src='" + imagenPoner + "' alt='Miniatura'>");
             });
             
-            $("#control-buttons li").mouseleave(function(){
-                //$("#miniatura-container").html("");
+            $("#control-buttons,#miniatura-imagenes li").mouseleave(function(){
                 $("#miniatura-container").css("display","none");
                 
-            });
+            });   
             
-
+            
+            
+            
+            /*************************************************/
+           // 5. APARTADO 5 MEJORANDO SLIDER
+           /*************************************************/
+            $("#miniatura-imagenes ul li").click(function(){
+                
+                var imagenSeleccionada = $(this).index();
+                if (currentSlider !== imagenSeleccionada) {
+                    cambiarPanel(imagenSeleccionada);
+                }
+            });
 
         }
 

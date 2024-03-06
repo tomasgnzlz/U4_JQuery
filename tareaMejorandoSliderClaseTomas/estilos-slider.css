@@ -71,13 +71,30 @@ button#imagen-siguiente{
   z-index: 999;
 }
 #miniatura-container{
+  position: absolute;
   width: 100px;
   height: 100px;
   display: none;
+  bottom: 8rem;
+  left: 40%;
+  z-index: 555;
+  
 }
 #miniatura-container img{
   width: 100%;
   height: auto;
+  border: solid #424f66 3px;
+}
+
+#miniatura-imagenes{
+  
+}
+#miniatura-imagenes ul{
+  display: flex;
+  justify-content: space-around;
+}
+#miniatura-imagenes ul{
+  cursor: pointer;
 }
 
 
