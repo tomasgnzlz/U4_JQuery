@@ -59,10 +59,3 @@ main.main-container > nav.main-menu >a:nth-child(1){
 }
 /*MENÚ*/
 
-input#hamburger:checked ~ nav.main-menu {
-  transform: translate(15rem, 0);
-}
-
-input#hamburger:checked ~ label {
-  transform: translate(15rem, 0);
-}
