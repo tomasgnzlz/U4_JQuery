@@ -46,16 +46,10 @@ $(document).ready(function () {
         if ($(this).find("ul").is(":hidden")) {
             $(this).find("ul").css("display","flex");
             //$(this).find("ul").css("left","0");
-            $(this).find("ul").animate({
-                left:"0",
-            },500);
+            $(this).find("ul").animate({ left:"0",},500);
             $(this).find("span").text("-");
-            
-            
         }else{
-            $(this).find("ul").animate({
-                left:"-50kw",
-            },500);
+            $(this).find("ul").animate({ left:"-50kw", },500);
             $(this).find("ul").css("display","none");
             $(this).find("span").text("+");
             

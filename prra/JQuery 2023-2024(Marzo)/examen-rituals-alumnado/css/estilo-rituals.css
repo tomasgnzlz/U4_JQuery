@@ -1,0 +1,432 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #efedeb;
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+div#content{
+    display: flex;
+    flex-flow: column;
+}
+header#header-web{
+    display:flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+    background-color: #1a191a;
+    
+}
+header#header-web > nav#bloque-iconos{
+    display: flex;
+    justify-content: space-between;
+    order:3;
+    margin-left: auto;
+    margin-right: 1.5rem;
+}
+header#header-web > nav#bloque-iconos > a {
+    margin: auto 0.5rem;
+}
+
+header#header-web > nav#menu-principal{
+    order: 1;
+    z-index: 100;
+}
+header#header-web > nav#menu-principal > label{
+    display: flex;
+    align-items: flex-start; /*Para que el span y el label ocupen el mismo espacio*/
+    margin-left: 1.5rem;
+}
+header#header-web > nav#menu-principal > label > span{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header#header-web > nav#menu-principal > ul{
+    display: none;
+    flex-flow: column;
+    position: absolute;
+    top: 3.8rem;
+    left: 0;
+    background-color: black;
+    color:white;
+    width: 100%;
+}
+header#header-web > nav#menu-principal ul > li{
+    padding: 1rem;
+}
+header#header-web > nav#menu-principal ul > li > a{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+header#header-web > nav#menu-principal ul > li > ul{
+    display: none;
+    flex-flow: column;
+    padding-left: 1.5rem;
+}
+header#header-web > nav#menu-principal ul > li > ul > li{
+    padding: 0.7rem;
+}
+header#header-web > a#logo{
+    order: 2;
+    align-self: stretch;
+    padding-top: 0.45rem;
+    margin-left: 1rem;
+}
+
+section#sec-gelducha{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #f5f4f3;
+    color:white;
+}
+section#sec-gelducha > h2{
+    flex: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding-top: 2rem;
+    text-align: center;
+    background-color: black;
+}
+section#sec-gelducha > div{
+    flex: 100%;
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+section#sec-gelducha > div > p{
+    width: 16rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+section#sec-gelducha > article{
+    flex: 0 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    color: #515152;
+    border: 2px solid #eeedec;
+}
+section#sec-gelducha > article:hover{
+    cursor: pointer;
+}
+section#sec-gelducha > article > h3{
+    flex: 100%;
+    order:2;
+    /*background-color: white;*/
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+section#sec-gelducha > article > p{
+    flex: 100%;
+    order: 3;
+    padding-left: 1rem;
+}
+
+section#sec-gelducha > article > picture{
+    flex: 100%;
+    order: 1;
+}
+section#sec-gelducha > article > picture > img{
+    width: 100%;
+    height: auto;
+    background-color: #faf9f8;
+}
+section#sec-gelducha > article > span{
+    order: 4;
+    padding-left: 1rem;
+}
+section#sec-gelducha > article > img{
+    order: 5; 
+    width: 3.5rem;
+    margin-top: auto;
+}
+section#sec-gelducha > article > input{
+   display:none;
+   order: 6;
+}
+
+/*CARTEL QUE SE MUESTRA AL HACER CLIC SOBRE EL CARRITO*/
+section#sec-gelducha > span#cartel{
+	background-color: black;
+    color: white;
+	border-radius: 0.3rem;
+	opacity: 0.9;
+	position: absolute;
+	z-index: 25;
+	padding: 0.4rem;
+	display: none;
+}
+
+/*FORMULARIO DE LOGIN*/
+section#registro{
+    margin-bottom: 5rem;
+    display: flex;
+    flex-flow: column;
+}
+section#registro > h2{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: black;
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 4rem;
+}
+section#registro, section#registro > div{
+	display: flex;
+	flex-flow: column;
+}
+
+section#registro > div{
+    background-color: #faf9f8;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    flex:100%;
+}
+section#registro label{
+	display: none;
+}
+section#registro input{
+	padding: 1.2rem 0.5rem 1.5rem 0.2rem;
+    max-width: 30rem;
+}
+section#registro input[type=button]{
+	background-color: black;
+	color:white;
+	font-weight: bold;
+	padding: 1.2rem 0 ;
+	border:0;
+    opacity: 0.9;
+    margin-bottom: 3rem;
+}
+section#registro input[type=button]:hover{
+	cursor:pointer;
+    opacity: 1;
+    border: 1px solid white;
+}
+section#registro span{
+	visibility: hidden;
+	color: red;
+}
+
+/*PIE DE PÁGINA*/
+footer{
+    display:flex;
+    flex-flow: column;
+    background-color: black;
+    font-size: 0.9rem;
+}
+
+footer > nav#menu-adicional > ul {
+    display: flex;
+    flex-flow: column;
+    color: white;
+}
+footer > nav#menu-adicional > ul > li {
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+footer > nav#menu-adicional > ul > li > ul{
+    display:none;
+}
+
+footer > nav#menu-social{
+    margin-top: 1.5rem;
+}
+footer > nav#menu-social > ul{
+    display: flex;
+    justify-content: center;
+}
+footer > nav#menu-social > ul > li{
+    padding-right: 0.7rem;
+}
+
+footer > nav#menu-social > ul > li img{
+    width: 2.8rem;
+    height: auto;
+}
+
+footer > picture{
+    text-align: center;
+}
+
+footer > small{
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+/*VENTANA DE COOKIES*/
+div#cookies{
+    display: none;
+    flex-flow: column;
+    background-color: black;
+    z-index: 100;
+    color: white;
+    padding: 0.3rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.8;
+}
+
+div#cookies > *{
+    padding: 0 2rem;
+}
+div#cookies > span:nth-child(1){
+    text-align: right;
+    padding: 0 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+div#cookies > span:last-child{
+    border: 1px solid white;
+    color:white;
+    padding: 0.5rem;
+    text-align: center;
+    margin: auto 2rem 1.5rem 2rem;
+    cursor: pointer;
+}
+
+/*VERSIÓN DE TABLET*/
+@media all and (min-width:680px){
+    section#sec-gelducha > article{
+        flex: 0 33.333%;
+}
+}
+
+
+/*VERSIÓN DE ESCRITORIO*/
+@media all and (min-width:1024px){
+
+    header#header-web > a#logo{
+        order: -1;
+        padding: 0;
+        align-self: auto;
+    }
+
+    /*Transformación del menú*/
+    header#header-web > nav#menu-principal{
+        flex: 30%;
+        /*z-index: 0;*/
+    }
+    
+    header#header-web > nav#menu-principal > label > span{
+        display: none; /*Ocultamos el icono de menú*/
+    }
+    
+    header#header-web > nav#menu-principal > ul{
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
+        position: initial;
+        top: 0;
+        left: 0;
+        background-color: #1a191a;
+    }
+    /*
+    header#header-web > nav#menu-principal > input:checked + ul{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        position: initial;
+        top: 0;
+        left: 0;
+        width: auto;
+    }*/
+    header#header-web > nav#menu-principal ul > li{
+        padding: 0;
+    }
+    header#header-web > nav#menu-principal ul > li > a{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    header#header-web > nav#menu-principal ul > li > a > span:nth-child(2){
+        display: none;
+    }
+
+    /*Transformación menú principal*/
+    section#sec-gelducha > article{
+        flex: 0 25%;
+        flex-flow: column;
+        justify-content: center;
+}
+    section#sec-gelducha > article > span{
+        flex: 100%;
+    }
+    section#sec-gelducha > article > p{
+        text-align: center;
+    }
+    section#sec-gelducha > article > img{
+        display: none;
+    }
+    section#sec-gelducha > article > input{
+        display:block;
+        border: 1px solid lightgray;
+        padding: 1rem 3rem;
+        margin: 1.5rem;
+        background-color: white;
+    }
+    section#sec-gelducha > article > input:hover{
+        cursor: pointer;
+        border-color: black;
+    }
+
+    /*Transformación del pie de página*/
+    footer{
+        flex-flow: row wrap;
+    }
+    footer > nav{
+        flex: 20%;
+    }
+    footer > nav#menu-adicional{
+        flex: 70%;
+    }
+    footer > nav#menu-adicional > ul {
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    footer > nav#menu-adicional > ul > li {
+        border-bottom: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    footer > nav#menu-adicional > ul > li > span:nth-child(2){ /* Ocultar el > */
+        display: none;
+    }
+    footer > picture{
+        flex: 25%;
+    }
+    footer > small{
+        flex: 100%;
+    }
+}
